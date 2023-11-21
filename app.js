@@ -118,19 +118,6 @@ function gameOverScreen() {
   text("Click to Restart", width/2, height-30);
 }
 
-/*function authScreen() {
-    background(44, 62, 80);
-    textAlign(CENTER);
-    fill(236, 240, 241);
-    textSize(12);
-    text("Auth", width/2, height/2 - 120);
-    textSize(130);
-    //text(score, width/2, height/2);
-    //textSize(15);
-    //text("Click to Restart", width/2, height-30);
-}*/
-
-
 /********* INPUTS *********/
 
 function mousePressed() {

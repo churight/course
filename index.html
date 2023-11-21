@@ -3,6 +3,7 @@
 		<title>Flappy Pong</title>
 		<script tyle="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.19/p5.min.js"></script>
         <script src="app.js"></script>
+        <script src="main.js"></script>
 		<style>
 			canvas {
 				box-shadow: 0 0 30px lightgray;
@@ -11,17 +12,17 @@
 	</head>
 	<body>
         <h3>Enter your name:</h3>
-        <input id=name name="name" type="text" size="30"> <br><br>
-          </script>
-                  <button  id="submit_btn" onclick="display()"> Check your score on the leader board!!  </button> <br> <br>
+        <input id=name name="username" type="text" size="30"> <br><br>
+        <button  id="submit_btn" onclick="display()"> Check your score on the leader board!!  </button> <br> <br>
 
-                  <div id="results">
-                      <table id="table">
-                          <th>Leader Board!!</th>
-                          <tr>
-                              <td id="leaderBoard"></td>
-                          </tr>
-                      </table>
-                  </div>
+        <script>
+            fetch('http://localhost:3000/leaderboard')
+            .then(res => res.json())
+            .then(result =>{
+              document.getElementById('test').innerHTML=result.message;
+        
+            })
+            .catch(error => console.error('error'));
+          </script>
 	</body>
 </html>

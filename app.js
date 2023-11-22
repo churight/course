@@ -49,7 +49,7 @@ var walls = [];
 /********* SETUP BLOCK *********/
 
 function setup() {
-  createCanvas(1200, 500);
+  createCanvas(1210, 620);
   // set the initial coordinates of the ball
   ballX=width/4;
   ballY=height/5;

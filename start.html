@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Flappy Pong</title>
+        <script src="main.js"></script>
+		<style>
+			canvas {
+				box-shadow: 0 0 30px lightgray;
+			}
+		</style>
+	</head>
+	<body>
+    <form class="container" method="post" action="/" id="add-score-form">
+      <input type="text" name = "username" id="username" placeholder="Your Name" required>
+      <input type="number" name = "score" id="score" placeholder="Your Score" required>
+      <button type="submit">Add Score</button>
+    </form>
+    <button onclick="window.location.href='index.html'">Play</button>
+    <button onclick="location.href ='http://localhost:3000/leaderboard'">View Leaderboard</button>
+    </body>
+</html>

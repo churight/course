@@ -11,18 +11,5 @@
 		</style>
 	</head>
 	<body>
-        <h3>Enter your name:</h3>
-        <input id=name name="username" type="text" size="30"> <br><br>
-        <button  id="submit_btn" onclick="display()"> Check your score on the leader board!!  </button> <br> <br>
-
-        <script>
-            fetch('http://localhost:3000/leaderboard')
-            .then(res => res.json())
-            .then(result =>{
-              document.getElementById('test').innerHTML=result.message;
-        
-            })
-            .catch(error => console.error('error'));
-          </script>
 	</body>
 </html>

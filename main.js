@@ -18,7 +18,7 @@ var collection;
 
 const Schema ={
   username: String,
-  //score: Number
+  score: Number
 }
 
 const leaderboardSchema =mongoose.model("Schema", Schema);
@@ -42,8 +42,8 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res){
   let newLeaderboard = new leaderboardSchema({
-    username: request.body.username,
-    //score: request.body.score
+    username: req.body.username,
+    score: req.body.score
   })
   newLeaderboard.save();
   res.redirect("/leaderboard");
